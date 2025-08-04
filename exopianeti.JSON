@@ -1,0 +1,76 @@
+[
+  {
+    "nome": "Marte",
+    "soprannome": "Il Pianeta Rosso",
+    "distanza_in_giorni": 260,
+    "descrizione": "Un deserto freddo ma promettente, dove l’umanità sogna di camminare.",
+    "gravita_percent": 37.9,
+    "durata_giorno": "24 h 39 min",
+    "temperatura_media": "-63 °C",
+    "curiosita": "Ospita il più grande vulcano del sistema solare: Olympus Mons (22 km).",
+    "immagine": "img/mars.png",
+    "curiosita_img": "img/mars-curiosità.jpg"
+  },
+  {
+    "nome": "Titano",
+    "soprannome": "Il Mondo di Metano",
+    "distanza_in_giorni": 1200,
+    "descrizione": "Unica luna con atmosfera densa e laghi di metano liquido.",
+    "gravita_percent": 13.8,
+    "durata_giorno": "15.9 giorni terrestri",
+    "temperatura_media": "-182 °C",
+    "curiosita": "Possiede pioggia, fiumi e laghi... ma di metano ed etano.",
+    "immagine": "img/titano.png",
+    "curiosita_img": "img/curiosità-titano.jpg"
+  },
+  {
+    "nome": "Venere",
+    "soprannome": "La Gemella Infernale",
+    "distanza_in_giorni": 120,
+    "descrizione": "Simile alla Terra per dimensioni, ma con un’atmosfera letale.",
+    "gravita_percent": 90.5,
+    "durata_giorno": "116.8 giorni terrestri",
+    "temperatura_media": "464 °C",
+    "curiosita": "La sua pressione atmosferica è 92 volte quella terrestre.",
+    "immagine": "img/venere.png",
+    "curiosita_img": "img/curiosità-venere.png"
+    
+  },
+  {
+    "nome": "Europa",
+    "soprannome": "L’Oceano Nascosto",
+    "distanza_in_giorni": 600,
+    "descrizione": "Una crosta di ghiaccio che nasconde un oceano potenzialmente abitabile.",
+    "gravita_percent": 13.4,
+    "durata_giorno": "3.5 giorni terrestri",
+    "temperatura_media": "-160 °C",
+    "curiosita": "Possibile presenza di forme di vita sotto il ghiaccio.",
+    "immagine": "img/europa.png",
+    "curiosita_img": "img/europa-curiosità.jpg"
+  },
+  {
+    "nome": "Nettuno",
+    "soprannome": "Il Gigante dei Venti",
+    "distanza_in_giorni": 5200,
+    "descrizione": "Il più distante e misterioso dei pianeti giganti, coperto da nuvole blu.",
+    "gravita_percent": 114.8,
+    "durata_giorno": "16 h 6 min",
+    "temperatura_media": "-200 °C",
+    "curiosita": "Registra i venti più veloci del sistema solare: oltre 2.100 km/h.",
+    "immagine": "img/nettuno.png",
+    "curiosita_img": "img/nettuno-curiosità.png"
+  },
+  {
+    "nome": "Io",
+    "soprannome": "Il Vulcano Incandescente",
+    "distanza_in_giorni": 600,
+    "descrizione": "La luna più geologicamente attiva del sistema solare, ricoperta di vulcani in eruzione.",
+    "gravita_percent": 18.2,
+    "durata_giorno": "1.769 giorni terrestri (42.5 h)",
+    "temperatura_media": "-155 °C",
+    "curiosita": "Ha un oceano di magma a circa 50 km sotto la superficie, che genera calore nei vulcani più attivi del sistema.",
+    "immagine": "img/io.png",
+    "curiosita_img": "img/io-curiosità.png"
+  }
+]
+

@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root {
+    --main-color: black;
+    --darkblue: rgb(19, 37, 73);
+    --lightgray: rgb(206, 206, 206);
+    --secondary-color: rgb(140, 255, 0);
+}
+html, body, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+body{
+    /*background-image: url('img/body-bg.jpg');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+.header-wrapper {
+    backdrop-filter: blur(20px);
+    display: flex;
+    position: fixed;
+    border-bottom: 1px solid white;
+    height: fit-content;
+    width: 90%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+#logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    color: white;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#logo h1 {
+    margin: 0 2rem;
+}
+.header-button {
+    margin: 0.5rem;
+    padding: 0.7rem;
+    height: fit-content;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+.header-button:hover {
+    border: none;
+}
+.header-button:hover::after {
+    content: "";
+    position: absolute;
+    background-image: url('img/star.png');
+    filter: invert(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 100%;
+    top: 0;
+    transform: translate(-50%);
+    height: 1.1rem;
+    width: 1.1rem;
+    pointer-events: none;
+}
+.hamburger-img {
+    width: 2rem;
+    filter: invert(1);
+    margin: 0.5rem;
+    cursor: pointer;
+}
+.click-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+.click-buttons {
+    position: fixed;
+    z-index: 1;
+    width: 90%;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+}
+.impact-container, main, #weather-container, .chart-wrapper {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    width: 90%;
+    margin: 0 auto;
+}
+.impact-container {
+    background-image: url("img/astronaut.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 35rem;
+    color: white;
+    mask-image: linear-gradient(to bottom, transparent 5.5rem, black 0rem, black 100%);
+}
+.main-title, .main-p {
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-left: 2rem;;
+}
+main {
+    padding-top: 2rem;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+#picture-of-the-day {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+.text-container {
+    margin-left: 2rem;
+    color: white;
+    width: 50%;
+    backdrop-filter: blur(20px);
+}
+.intro-title {
+    height: fit-content;
+}
+.other-images {
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--main-color);
+    width: 18.5rem;
+    height: fit-content;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    transition: transform 0.2s;
+}
+.other-images::after {
+    content: "";
+    background-image: url('img/arrow-right.png');
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.other-images:hover {
+    transform: scale(1.05);
+}
+.pic-container {
+    width: 50%;
+    background-color: var(--lightgray);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+.img-filter {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.img-of-the-day {
+    width: 90%;
+    height: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    z-index: 0;
+}
+/*
+/* Mirino: tratto orizzontale al centro 
+.img-filter::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+
+}*/
+
+/* Mirino: tratto verticale al centro */
+.img-filter::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: 15;
+  width: 80%;
+  height: 80%;
+  border: 1px solid white;
+  clip-path: polygon(
+    /* top-left corner */
+    0 0, 40px 0, 30px 10px, 0 30px,
+
+    /* top-right corner */
+    calc(100% - 25px) 0, 100% 0, 100% 20px, calc(100% - 20px) 20px,
+
+    /* bottom-right corner */
+    100% calc(100% - 20px), 100% 100%, calc(100% - 30px) 100%, calc(100% - 10px) calc(100% - 10px),
+
+    /* bottom-left corner */
+    5px 100%, 0 100%, 0 calc(100% - 30px), 10px calc(100% - 30px)
+  );
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+.download-button {
+    align-self: flex-end;
+    background-color: var(--main-color);
+    color: white;
+    margin: 1rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    width: 7rem;
+    transition: transform 0.2s;
+}
+.download-button::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-image: url('img/download.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: invert(1);
+}
+.download-button:hover {
+    transform: scale(1.07);
+}
+/*ESPLORAZIONE SISTEMA SOLARE*/
+.other-worlds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 5rem;
+}
+.other-worlds h4 {
+    margin-bottom: 0;
+}
+.solar-system {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+    margin-top: 2rem;
+}
+.planets {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+}
+.planets p:hover {
+    cursor: pointer;
+    border-bottom: 3px solid var(--lightgray); /*???????*/
+}
+.planet-info {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    color: white;
+}
+.planet-details {
+    width: 50%;
+    padding: 2rem;
+}
+.p-distance {
+    background-color: var(--main-color);
+    width: fit-content;
+    color: white;
+    padding: 0.5rem;
+}
+.planet-mesurements {
+    display: flex;
+}
+.planet-mesurements div {
+    padding: 0.5rem;
+    width: fit-content;
+    border-left: 1px solid var(--main-color);
+    margin-top: 0.5rem;
+}
+.planet-img-container {
+    max-width: 50%;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    aspect-ratio: 2 / 2; /* oppure 4 / 3, 16 / 9, ecc. */
+    margin: auto;
+}
+.planet-img {
+    object-fit: contain;
+    display: block;
+    width: 85%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+.planet-arrow, .planet-arrow2 {
+  position: absolute;
+  border-right: 2px solid white;
+}
+.planet-arrow {
+    height: 10rem;
+    transform: rotate(30deg);
+    top: 40%;
+    left: 25%;
+    height: 4rem;
+    transform: rotate(30deg);
+}
+.planet-arrow2 {
+    height: 8rem;
+    transform: rotate(-10deg);
+    top: 41%;
+    right: 71%;
+    height: 5rem;
+    transform: rotate(-10deg);
+}
+.curiosità-container {
+    height: 8rem;
+}
+.curiosità-container img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    position: relative;
+    top: -65%;
+    right: 100%;
+    z-index: 1;
+    padding: 0.5rem;
+    border: 1px dashed white;
+}
+.curiosità-container p {
+    width: 15rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+    margin-right: 4rem;
+}
+
+
+
+/*TEMPO SU MARTE*/
+
+#weather-container {
+    background-image: url("img/curiosity.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    height: fit-content;
+    background-color: lightgray;
+}
+.mesurements {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+.sol-container, .mesured-details, .week-container {
+    background-color: rgba(255, 255, 255, 0.308);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.sol-container, .mesured-details, .insight-container, .week-container {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    color: white;
+}
+.insight-container {
+    color: var(--main-color);
+    width: 50%;
+    align-items:baseline;  
+}
+.insight-container h2 {
+    color: white;
+}
+.week-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+    height: fit-content;
+    width: fit-content;
+}
+.week-container {
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    height: fit-content;
+    width: fit-content;
+    box-sizing: border-box;
+    border-left: 2px solid var(--lightgray);
+}
+.week-container h4, p {
+    margin: 0.1rem;
+}
+.specific-day {
+    width: fit-content;
+    padding: 0.3rem;
+    background-color: rgb(175, 123, 19);
+    border-radius: 5px;
+    border-left: 2px solid var(--lightgray);
+}
+.chart-wrapper {
+    background-color: var(--lightgray);
+}
+
+@media screen and (max-width:900px) {
+    #picture-of-the-day {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .pic-container {
+        width: 100%;
+    }
+    #weather-container {
+        height: fit-content;
+    }
+    .mesurements {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .insight-container {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    .week-wrapper {
+        justify-content: center;
+    }
+    .week-container {
+        width: fit-content;
+    }
+    .planet-arrow {
+        top: 34%;
+        right: 74%;
+    }
+    .planet-arrow2 {
+        height: 6rem;
+        top: 35%;
+        right: 66%;
+    }
+    .curiosità-container img  {
+        top: -24.5%;
+        left: -11%;
+        width: 6rem;
+        height: 6rem;
+    }
+    .curiosità-container p {
+        width: 15rem;
+        margin-top: 8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OTEHR IMAGES */
+.intro-otherImg {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: fit-content;
+    color: white;
+    text-align: center;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    border: none;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+    color: white;
+}
+.article {
+    width: 28vw;
+    height: 80vh;
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.titles {
+    width: 90%;
+    height: fit-content;
+    margin-bottom: 1rem;
+}
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 25vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+}
+.images {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.download-container {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.350);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.download-button2 {
+    background-color: transparent;
+    color: white;
+    padding: 0.6rem;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    position: relative;
+    width: 9rem;
+    height: 3rem;
+    text-align: start;
+    font-size: 1.05rem;
+}
+.download-button2::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-image: url('img/download.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: invert(1);
+    z-index: 11;
+}
+.download-button-onhover {
+    transform: scale(1.1);
+}
+.explanaitions {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;     /* Numero di righe */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 900px) {
+    .article {
+        width: 85vw;
+    }
+    .img-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        height: 50%;
+    }
+}
