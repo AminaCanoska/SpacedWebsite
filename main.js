@@ -173,8 +173,6 @@ async function getImages(){
 })
 picContainer.appendChild(download);
 
-
-
     }catch(err){
         console.log(err);
     }
@@ -272,6 +270,9 @@ async function getPlanets() {
                 tripBtn.textContent = "Prenota un viaggio";
                 planetDetails.appendChild(tripBtn);
 
+                tripBtn.addEventListener("click", tripPlanner)
+
+
                 let planetImgConteiner = ce("div")
                 planetImgConteiner.classList.add("planet-img-container")
                 planetInfo.appendChild(planetImgConteiner);
@@ -307,6 +308,37 @@ async function getPlanets() {
         })
     }catch(err){
         console.log(err);
+    }
+
+    function tripPlanner(){
+        let tripContainer = ce("div");
+        tripContainer.classList.add("trip-container");
+        document.body.appendChild(tripContainer);
+        let inputContainer = ce("div");
+        inputContainer.classList.add("input-container");
+        tripContainer.appendChild(inputContainer);
+        let inputNameLabel = ce("label");
+        inputNameLabel.textContent = "Name:";
+        inputContainer.appendChild(inputNameLabel);
+        let inputName = ce("input");
+        inputName.
+        inputContainer.appendChild(inputName);
+        let inputLastNameLabel = ce("label");
+        inputLastNameLabel.textContent = "Surname:";
+        inputContainer.appendChild(inputLastNameLabel);
+        let inputLastName = ce("input");
+        inputContainer.appendChild(inputLastName);
+        let inputEtàLabel = ce("label");
+        inputEtàLabel.textContent = "Età::";
+        inputContainer.appendChild(inputEtàLabel);
+        let inputEtà = ce("input");
+        inputContainer.appendChild(inputEtà);
+        let inputLocationLabel = ce("label");
+        inputLocationLabel.textContent = "Choose Location:";
+        inputContainer.appendChild(inputLocationLabel);
+        let inputLocation = ce("input")
+
+
     }
 
     
